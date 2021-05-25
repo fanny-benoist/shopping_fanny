@@ -1,0 +1,53 @@
+<!doctype html>
+<head>
+  <!-- Google Tag Manager -->
+<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+  new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+  j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+  'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+  })(window,document,'script','dataLayer','GTM-5846Z38');</script>
+  <!-- End Google Tag Manager -->
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/instantsearch.css@7.3.1/themes/algolia-min.css" integrity="sha256-HB49n/BZjuqiCtQQf49OdZn63XuKFaxcIHWf0HNKte8=" crossorigin="anonymous"> 
+   <link rel="stylesheet" type="text/css" href="./app.css">
+</head>
+<body>
+  <!-- Google Tag Manager (noscript) -->
+<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-5846Z38"
+  height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+  <!-- End Google Tag Manager (noscript) -->
+
+    <header class="header">
+        Fashion
+        <div id="searchbox"></div>
+      </header>
+
+    <main class="search-container">
+        <div class="left-panel">
+            <div id="clear-refinements"></div>
+            <h1>Color</h1>
+            <div id="color"></div>
+            <h1>Fit</h1>
+            <div id="fit"></div>
+            <h1>Categories</h1>
+            <div id="categories-menu"></div>
+            <h1>Price Range</h1>
+            <div id="price-range"></div>
+        </div>
+        <div class="right-panel">
+            <div id="stats"></div>
+            <div id="hits" data-insights-object-id="{{hit.objectID}}"
+              data-insights-position="{{hit.__position}}"
+              data-insights-query-id="{{hit.__queryID}}"></div>
+        </div>
+    </main>
+    <footer>
+        <div id="hits-per-page"></div>
+        <div id="pagination"></div>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/algoliasearch@4.5.1/dist/algoliasearch-lite.umd.js" integrity="sha256-EXPXz4W6pQgfYY3yTpnDa3OH8/EPn16ciVsPQ/ypsjk=" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/instantsearch.js@4.8.3/dist/instantsearch.production.min.js" integrity="sha256-LAGhRRdtVoD6RLo2qDQsU2mp+XVSciKRC8XPOBWmofM=" crossorigin="anonymous"></script>
+  <script src="./app.js"></script>
+</body>
