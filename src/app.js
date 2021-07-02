@@ -86,4 +86,9 @@ search.addWidgets([
     })
 ]);
 
+search.use(instantsearch.middlewares.createInsightsMiddleware({
+  insightsClient: window.aa,
+}));
+window.aa('setUserToken', 'my-user-token');
+
 search.start();
