@@ -60,16 +60,21 @@ search.addWidgets([
         }
     }
     }),
-    instantsearch.widgets.hits({
+      instantsearch.widgets.hits({
         container: '#hits',
         templates: {
-          item: `
+          item: (hit, bindEvent) => `
             <div>
-              <img src="{{image_link}}" align="center"  alt="{{name}}" />
+              <img src="${hit.image_link}" ${bindEvent('click', hit, 'View product')} align="left" alt="${hit.name}" />
               <div class="hit-name">
-                {{#helpers.highlight}}{ "attribute": "name" }{{/helpers.highlight}}
+                ${hit.name}
               </div>
-              <div class="hit-price">\${{price}}</div>
+              <div class="hit-price">${hit.price}$</div>
+              <div>
+               <button ${bindEvent('conversion', hit, 'added to cart')}>
+                 Add to cart
+               </button>
+              </div>
             </div>
           `,
         },
@@ -92,3 +97,19 @@ search.use(instantsearch.middlewares.createInsightsMiddleware({
 window.aa('setUserToken', 'my-user-token');
 
 search.start();
+
+
+/*instantsearch.widgets.hits({
+  container: '#hits',
+  templates: {
+    item: `
+      <div>
+        <img src="{{image_link}}" align="center"  alt="{{name}}" />
+        <div class="hit-name">
+          {{#helpers.highlight}}{ "attribute": "name" }{{/helpers.highlight}}
+        </div>
+        <div class="hit-price">\${{price}}</div>
+      </div>
+    `,
+  },
+})*/

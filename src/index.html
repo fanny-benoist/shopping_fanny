@@ -1,13 +1,16 @@
 <!doctype html>
 <head>
   <script>
-    var ALGOLIA_INSIGHTS_SRC = "https://cdn.jsdelivr.net/npm/search-insights@1.8.0";
-  
+    var ALGOLIA_INSIGHTS_SRC = "https://cdn.jsdelivr.net/npm/search-insights@1.7.1";
     !function(e,a,t,n,s,i,c){e.AlgoliaAnalyticsObject=s,e[s]=e[s]||function(){
     (e[s].queue=e[s].queue||[]).push(arguments)},i=a.createElement(t),c=a.getElementsByTagName(t)[0],
     i.async=1,i.src=n,c.parentNode.insertBefore(i,c)
     }(window,document,"script",ALGOLIA_INSIGHTS_SRC,"aa");
-  
+
+    aa('init', {
+      appId: 'ITP4GM7PGU',
+      apiKey: '98ec2925946deee046bb35ddd77bef30',
+    });
   </script>
   
   <meta charset="UTF-8">
@@ -25,7 +28,8 @@
     <main class="search-container">
         <div class="left-panel">
             <div id="clear-refinements"></div>
-            <h1>Color</h1>
+            <h1>Color TEST
+            </h1>
             <div id="color"></div>
             <h1>Fit</h1>
             <div id="fit"></div>
@@ -36,9 +40,7 @@
         </div>
         <div class="right-panel">
             <div id="stats"></div>
-            <div id="hits" data-insights-object-id="{{hit.objectID}}"
-              data-insights-position="{{hit.__position}}"
-              data-insights-query-id="{{hit.__queryID}}"></div>
+            <div id="hits"></div>
         </div>
     </main>
     <footer>
